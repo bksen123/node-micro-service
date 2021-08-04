@@ -1,5 +1,5 @@
 http:
-  port: 8080
+  port: 6080
 admin:
   port: 9876
   host: localhost
@@ -20,11 +20,11 @@ serviceEndpoints:
   httpbin:
     url: "https://httpbin.org"
   userService:
-    url: "http://localhost:3001"
+    url: "http://localhost:6081"
   crudService:
-    url: "http://localhost:3002"
+    url: "http://localhost:6082"
   transactionService:
-    url: "http://localhost:3003"
+    url: "http://localhost:6083"
 policies:
   - basic-auth
   - cors
