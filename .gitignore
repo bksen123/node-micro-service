@@ -1,4 +1,4 @@
 /api-gateway-micro-service/node_modules
-/transaction-micro-service/node_modules
 /users-micro-service/node_modules
-/api-gateway-micro-service/node_modules
+/crud-micro-service/node_modules
+/transaction-micro-service/node_modules
