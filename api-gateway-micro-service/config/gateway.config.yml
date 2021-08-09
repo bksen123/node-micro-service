@@ -2,29 +2,29 @@ http:
   port: 6080
 admin:
   port: 9876
-  host: 92.168.1.235
+  host: 192.168.1.235
 apiEndpoints:
   api:
-    host: 92.168.1.235
+    host: 192.168.1.235
     paths: "/ip"
   user:
-    host: 92.168.1.235
+    host: 192.168.1.235
     paths: ["/users", "/users/*"]
   crud:
-    host: 92.168.1.235
+    host: 192.168.1.235
     paths: ["/crud", "/crud/*"]
   transaction:
-    host: 92.168.1.235
+    host: 192.168.1.235
     paths: ["/transaction", "/transaction/*"]
 serviceEndpoints:
   httpbin:
     url: "https://httpbin.org"
   userService:
-    url: "http://92.168.1.235:6081"
+    url: "http://192.168.1.235:6081"
   crudService:
-    url: "http://92.168.1.235:6082"
+    url: "http://192.168.1.235:6082"
   transactionService:
-    url: "http://92.168.1.235:6083"
+    url: "http://192.168.1.235:6083"
 policies:
   - proxy
   - basic-auth
