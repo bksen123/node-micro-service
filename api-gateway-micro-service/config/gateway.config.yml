@@ -26,6 +26,7 @@ serviceEndpoints:
   transactionService:
     url: "http://localhost:6083"
 policies:
+  - proxy
   - basic-auth
   - cors
   - expression
