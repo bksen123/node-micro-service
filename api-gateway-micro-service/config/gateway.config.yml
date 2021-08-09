@@ -2,11 +2,11 @@ http:
   port: 6080
 admin:
   port: 9876
-  host: 192.168.1.235
+  host: 182.70.249.165
 apiEndpoints:
   api:
     host: 192.168.1.235
-    paths: "*"
+    paths: "/ip"
   user:
     host: 192.168.1.235
     paths: ["/users", "/users/*"]
@@ -18,7 +18,7 @@ apiEndpoints:
     paths: ["/transaction", "/transaction/*"]
 serviceEndpoints:
   httpbin:
-    url: "https://httpbin.org"
+    url: "http://182.70.249.165"
   userService:
     url: "http://192.168.1.235:6081"
   crudService:
