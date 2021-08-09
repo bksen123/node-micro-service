@@ -18,7 +18,7 @@ apiEndpoints:
     paths: ["/transaction", "/transaction/*"]
 serviceEndpoints:
   httpbin:
-    url: "http://192.168.1.235:6080"
+    url: "http://182.70.249.165:60"
   userService:
     url: "http://192.168.1.235:6081"
   crudService:
