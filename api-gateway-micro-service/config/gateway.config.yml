@@ -2,10 +2,10 @@ http:
   port: 6080
 admin:
   port: 9876
-  host: 182.70.249.165
+  host: 192.168.1.235 # this is system private ip
 apiEndpoints:
   api:
-    host: 182.70.249.165
+    host: 182.70.249.165 # this is public ip where we will host our app
     paths: "/ip"
   user:
     host: 182.70.249.165
