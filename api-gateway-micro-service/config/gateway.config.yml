@@ -46,11 +46,6 @@ pipelines:
           - action:
               serviceEndpoint: httpbin
               changeOrigin: true
-          - condition:
-            name: http://182.70.249.165:6080
-            path: /admin
-          action:
-            serviceEndpoint: 182.70.249.165 # reference to serviceEndpoints Section
   userPipeline:
     apiEndpoints:
       - user
