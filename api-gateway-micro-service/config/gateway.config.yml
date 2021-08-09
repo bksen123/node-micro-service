@@ -26,7 +26,6 @@ serviceEndpoints:
   transactionService:
     url: "http://182.70.249.165:6083"
 policies:
-  - proxy
   - basic-auth
   - cors
   - expression
