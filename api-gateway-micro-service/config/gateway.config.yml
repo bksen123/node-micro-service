@@ -2,29 +2,29 @@ http:
   port: 6080
 admin:
   port: 9876
-  host: localhost
+  host: 92.168.1.235
 apiEndpoints:
   api:
-    host: localhost
+    host: 92.168.1.235
     paths: "/ip"
   user:
-    host: localhost
+    host: 92.168.1.235
     paths: ["/users", "/users/*"]
   crud:
-    host: localhost
+    host: 92.168.1.235
     paths: ["/crud", "/crud/*"]
   transaction:
-    host: localhost
+    host: 92.168.1.235
     paths: ["/transaction", "/transaction/*"]
 serviceEndpoints:
   httpbin:
     url: "https://httpbin.org"
   userService:
-    url: "http://localhost:6081"
+    url: "http://92.168.1.235:6081"
   crudService:
-    url: "http://localhost:6082"
+    url: "http://92.168.1.235:6082"
   transactionService:
-    url: "http://localhost:6083"
+    url: "http://92.168.1.235:6083"
 policies:
   - proxy
   - basic-auth
@@ -46,6 +46,11 @@ pipelines:
           - action:
               serviceEndpoint: httpbin
               changeOrigin: true
+          - condition:
+            name: http://182.70.249.165:6080
+            path: /admin
+          action:
+            serviceEndpoint: 182.70.249.165 # reference to serviceEndpoints Section
   userPipeline:
     apiEndpoints:
       - user
