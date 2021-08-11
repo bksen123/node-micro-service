@@ -8,10 +8,10 @@ console.log('system username== ', os.hostname());
 // console.log('process', process.env.SERVER_USER_NAME);
 if (process.env.SERVER_USER_NAME === os.hostname()) {
   gateway()
-    .load(path.join(__dirname, 'live-config'))
+    .load(path.join(__dirname, 'live-config')) // FOR THE LIVE SERVER
     .run();
 } else {
   gateway()
-    .load(path.join(__dirname, 'dev-config'))
+    .load(path.join(__dirname, 'dev-config')) // FOR THE LOCAL SYSTEM
     .run();
 }
