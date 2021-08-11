@@ -5,7 +5,6 @@ const crud = require("./../crud-micro-service/bin/www");
 const transaction = require("./../transaction-micro-service/bin/www");
 const os = require('os');
 console.log('OS.hostname()========= ', os.hostname());
-
 gateway()
   .load(path.join(__dirname, 'config'))
   .run();
